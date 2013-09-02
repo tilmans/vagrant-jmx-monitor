@@ -1,0 +1,15 @@
+# The Server running the Java/JMX Process
+server: xxx.xxx.xxx.xxx
+# Port JMX is running on
+port: 1098
+# The mail server to use
+mail_server: xxx.xxx.xxx.xxx 
+mail_server_port: 25
+email_from: me@mine.com
+email_from_name: Monitor Service
+email_to: admin@mine.com
+email_to_name: Administrator
+# % between 0 and 1
+cpu_threshold: 0.9 
+# % between 0 and 1 of max heap
+heap_threshold: 0.8 

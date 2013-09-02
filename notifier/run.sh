@@ -1,0 +1,1 @@
+ruby stats.rb > out.log 2> error.log

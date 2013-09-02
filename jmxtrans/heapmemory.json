@@ -1,0 +1,47 @@
+{
+  "servers": [
+    {
+      "port": 1098,
+      "host": "yourHostHere",
+      "queries": [
+        {
+          "obj": "java.lang:type=Memory",
+          "attr": [
+            "HeapMemoryUsage",
+            "NonHeapMemoryUsage"
+          ],
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StatsDWriter",
+              "settings": {
+                "port": 8125,
+                "host": "localhost",
+                "bucketType": "g"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "java.lang:type=OperatingSystem",
+          "attr": [
+            "SystemLoadAverage",
+            "FreePhysicalMemorySize",
+            "TotalPhysicalMemorySize",
+            "SystemCpuLoad",
+            "ProcessCpuLoad"
+          ],
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StatsDWriter",
+              "settings": {
+                "port": 8125,
+                "host": "localhost",
+                "bucketType": "g"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
