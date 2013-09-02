@@ -4,3 +4,5 @@ jmxtrans/log.txt
 jmxtrans/pid.txt
 settings.yml
 .vagrant
+python-statsd-1.6.0
+

@@ -6,7 +6,7 @@ Vagrant::Config.run do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "monitor"
-  # config.vm.box_url = "https://dl.dropboxusercontent.com/s/tgk7203cbbq4ust/monitor.box?token_hash=AAEQGeu3SKXvoiEJaCniY4VSkKhJ6xEaUY8xN07qZZo0-w"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/s/tgk7203cbbq4ust/monitor.box?token_hash=AAEQGeu3SKXvoiEJaCniY4VSkKhJ6xEaUY8xN07qZZo0-w"
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
