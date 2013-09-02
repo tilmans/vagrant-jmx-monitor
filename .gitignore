@@ -3,3 +3,4 @@ jmxtrans/jmxtrans.log
 jmxtrans/log.txt
 jmxtrans/pid.txt
 settings.yml
+.vagrant
