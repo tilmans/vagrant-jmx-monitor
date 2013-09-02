@@ -1,0 +1,9 @@
+{
+  "name": "statsd-sys-reporter",
+  "description": "Simple CPU and mem reporter",
+  "author": "Tilman Schlenker <tilman.s@me.com>",
+  "dependencies": {
+    "statsd-client": "0.0.15",
+    "os-utils": "0.0.14"
+  }
+}
