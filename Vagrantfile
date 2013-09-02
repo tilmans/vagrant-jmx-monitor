@@ -6,7 +6,7 @@ Vagrant::Config.run do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "monitor"
-  # config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  config.vm.box_url = "https://www.dropbox.com/s/tgk7203cbbq4ust/monitor.box"
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
@@ -18,6 +18,7 @@ $script = <<SCRIPT
 echo Running the setup script
 su vagrant -c /vagrant/setup.rb
 SCRIPT
+  
   config.vm.provision :shell, :inline => $script
 
 end
