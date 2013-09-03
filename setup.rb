@@ -68,7 +68,7 @@ Dir.chdir('/vagrant/jmxtrans')
 if `ps -A | grep java` != ''
 	`killall -9 java`
 end
-`rm pid.txt`
+`rm pid.txt` if File.exists? 'pid.txt'
 `./start.sh`
 
 Dir.chdir('/vagrant/notifier')
