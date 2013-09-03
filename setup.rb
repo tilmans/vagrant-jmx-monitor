@@ -65,6 +65,7 @@ Net::SMTP.start(MAIL_SERVER) do |smtp|
 end
 
 Dir.chdir('/vagrant/jmxtrans')
+`./stop.sh`
 if `ps -A | grep java` != ''
 	`killall -9 java`
 end

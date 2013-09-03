@@ -1,6 +1,8 @@
+STATSD_SERVER = 'localhost'
+
 os = require('os-utils');
 var SDC = require('statsd-client'),
-    sdc = new SDC({host: 'localhost', port: 8125, prefix: require('os').hostname(), debug: true});
+    sdc = new SDC({host: STATSD_SERVER, port: 8125, prefix: require('os').hostname(), debug: true});
 
 var regular_update = function () {
 	console.log("Update...");

@@ -32,3 +32,12 @@ Email notifications
 -------------------
 Based on the data in graphite, a regulartly scheduled script checks for high loads on the server and sends out an email if it hits the limits configured in `settings.yml`. The heap limit corresponds to > 80% usage of the max heap.
 
+Simple System monitoring client
+-------------------
+To get basic system data into graphite quickly the project includes a minimal node client that reads CPU and memory values and that should work across all OS that support node.
+
+* Install node
+* cd into `node`
+* `npm install`
+* Change the STATSD_SERVER to the IP or name of the machine running the VM
+* `node stat.js`
