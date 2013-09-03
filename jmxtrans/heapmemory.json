@@ -22,6 +22,22 @@
           ]
         },
         {
+          "obj": "java.lang:type=GarbageCollector,*",
+          "attr": [
+            "LastGcInfo"
+          ],
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StatsDWriter",
+              "settings": {
+                "port": 8125,
+                "host": "localhost",
+                "bucketType": "g"
+              }
+            }
+          ]
+        },
+        {
           "obj": "java.lang:type=OperatingSystem",
           "attr": [
             "SystemLoadAverage",
@@ -29,6 +45,22 @@
             "TotalPhysicalMemorySize",
             "SystemCpuLoad",
             "ProcessCpuLoad"
+          ],
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StatsDWriter",
+              "settings": {
+                "port": 8125,
+                "host": "localhost",
+                "bucketType": "g"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "java.lang:type=Threading",
+          "attr": [
+            "ThreadCount"
           ],
           "outputWriters": [
             {
