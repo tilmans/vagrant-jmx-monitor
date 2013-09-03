@@ -1,5 +1,6 @@
 {
   "name": "statsd-sys-reporter",
+  "version": "0.0.1",
   "description": "Simple CPU and mem reporter",
   "author": "Tilman Schlenker <tilman.s@me.com>",
   "dependencies": {

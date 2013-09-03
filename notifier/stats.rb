@@ -3,6 +3,7 @@ require 'rest_client'
 require 'json'
 require 'net/smtp'
 require 'yaml'
+require_relative 'util.rb'
 
 settings = YAML.load(File.read('../settings.yml'))
 
@@ -75,6 +76,11 @@ if percentil > (threshold)
 end
 
 unless errors.size == 0
+	if error_sent_recently? settings['email_send_threshold']
+		puts 'Not sending email since one was recently sent.'
+		exit
+	end
+
 	error_text = ""
 	errors.each do |error|
 		error_text += "#{error}\n"
@@ -92,7 +98,7 @@ The following errors occured:
  	MESSAGE_END
 
  	Net::SMTP.start(MAIL_SERVER) do |smtp|
- 	  smtp.send_message message, EMAIL_FROM, 
- 	                             EMAIL_TO
+ 	  smtp.send_message message, EMAIL_FROM, EMAIL_TO
+ 	  update_send_time
  	end
 end

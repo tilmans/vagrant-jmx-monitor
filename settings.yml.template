@@ -13,3 +13,5 @@ email_to_name: Administrator
 cpu_threshold: 0.9 
 # % between 0 and 1 of max heap
 heap_threshold: 0.8 
+# Minutes between error emails
+email_send_threshold: 60
