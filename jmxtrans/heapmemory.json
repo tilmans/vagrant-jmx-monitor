@@ -44,7 +44,8 @@
             "FreePhysicalMemorySize",
             "TotalPhysicalMemorySize",
             "SystemCpuLoad",
-            "ProcessCpuLoad"
+            "ProcessCpuLoad",
+            "OpenFileDescriptorCount"            
           ],
           "outputWriters": [
             {
